@@ -11,6 +11,8 @@
 		B2476D5A2276E75400776352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2476D592276E75400776352 /* Assets.xcassets */; };
 		B2476D5D2276E75400776352 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2476D5B2276E75400776352 /* MainMenu.xib */; };
 		B2476D692276E75500776352 /* IGSlidersViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2476D682276E75500776352 /* IGSlidersViewTests.swift */; };
+		B2476D9F22783BBB00776352 /* IGSliders.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2476D9D22783BBB00776352 /* IGSliders.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2476DA62278B1C300776352 /* IGSliders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2476D9D22783BBB00776352 /* IGSliders.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B2476DA022783BBB00776352 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2476D9F22783BBB00776352 /* IGSliders.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B2476D542276E75300776352 /* IGSlidersView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGSlidersView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2476D572276E75300776352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +49,7 @@
 		B2476D642276E75500776352 /* IGSlidersViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGSlidersViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2476D682276E75500776352 /* IGSlidersViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGSlidersViewTests.swift; sourceTree = "<group>"; };
 		B2476D6A2276E75500776352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2476D9D22783BBB00776352 /* IGSliders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IGSliders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2476DA62278B1C300776352 /* IGSliders.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +74,11 @@
 		B2476D4B2276E75300776352 = {
 			isa = PBXGroup;
 			children = (
+				B2476D9D22783BBB00776352 /* IGSliders.framework */,
 				B2476D562276E75300776352 /* IGSlidersView */,
 				B2476D672276E75500776352 /* IGSlidersViewTests */,
 				B2476D552276E75300776352 /* Products */,
+				B2476DA52278B1C300776352 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +112,13 @@
 			path = IGSlidersViewTests;
 			sourceTree = "<group>";
 		};
+		B2476DA52278B1C300776352 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +129,7 @@
 				B2476D502276E75300776352 /* Sources */,
 				B2476D512276E75300776352 /* Frameworks */,
 				B2476D522276E75300776352 /* Resources */,
+				B2476DA022783BBB00776352 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
