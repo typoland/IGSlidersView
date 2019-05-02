@@ -690,11 +690,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="676" height="319"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0g-4q-Ema">
-                        <rect key="frame" x="398" y="12" width="270" height="294"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="i0g-4q-Ema">
+                        <rect key="frame" x="459" y="12" width="209" height="295"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="294" id="axV-cj-PbF"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="209" id="smx-MU-DvD"/>
+                        </constraints>
                     </customView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="i0g-4q-Ema" secondAttribute="trailing" constant="8" id="8Kt-kM-AiK"/>
+                    <constraint firstItem="i0g-4q-Ema" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="459" id="D9S-09-XOj"/>
+                    <constraint firstItem="i0g-4q-Ema" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="FR5-av-bxO"/>
+                    <constraint firstItem="i0g-4q-Ema" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="12" id="f1T-Ec-qNk"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="423" y="51.5"/>
         </window>

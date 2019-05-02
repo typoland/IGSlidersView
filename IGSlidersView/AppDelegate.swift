@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         editViewController.insertViewInto(editView)
+        editViewController.readFromDefaults(self)
 
 //        editView.addSubview(editViewController.view)
 //        editViewController.view.frame = NSMakeRect(0, 0, editView.frame.width, editView.frame.height)
