@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.SceneKitIBPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -690,19 +691,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="676" height="319"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="i0g-4q-Ema">
-                        <rect key="frame" x="459" y="12" width="209" height="295"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="294" id="axV-cj-PbF"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="209" id="smx-MU-DvD"/>
-                        </constraints>
-                    </customView>
+                    <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EN4-ej-t57">
+                        <rect key="frame" x="6" y="7" width="664" height="307"/>
+                        <subviews>
+                            <sceneView fixedFrame="YES" id="Ueg-ov-X0A">
+                                <rect key="frame" x="0.0" y="0.0" width="451" height="307"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </sceneView>
+                            <customView fixedFrame="YES" id="i0g-4q-Ema">
+                                <rect key="frame" x="452" y="0.0" width="212" height="307"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="i0g-4q-Ema" secondAttribute="trailing" constant="8" id="8Kt-kM-AiK"/>
-                    <constraint firstItem="i0g-4q-Ema" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="459" id="D9S-09-XOj"/>
-                    <constraint firstItem="i0g-4q-Ema" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="FR5-av-bxO"/>
-                    <constraint firstItem="i0g-4q-Ema" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="12" id="f1T-Ec-qNk"/>
+                    <constraint firstItem="EN4-ej-t57" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="4Q4-cO-0vb"/>
+                    <constraint firstItem="EN4-ej-t57" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="6" id="PkR-t0-QPv"/>
+                    <constraint firstAttribute="bottom" secondItem="EN4-ej-t57" secondAttribute="bottom" constant="7" id="ccA-cH-4Po"/>
+                    <constraint firstItem="EN4-ej-t57" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="5" id="jcz-sj-qhc"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="423" y="51.5"/>
