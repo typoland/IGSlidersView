@@ -34,18 +34,18 @@ class Preview : SCNView {
     }
     
     func updateBoxes(with styles:[(name:String, values:[Double])]) {
-        print ("updateBoxes", boxesNode.parent)
+        //print ("updateBoxes", boxesNode.parent)
         boxesNode.childNodes.forEach{ $0.removeFromParentNode() }
         
         for style in styles {
             let styleBox = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
             styleBox.name = style.name
             let styleNode = SCNNode(geometry: styleBox)
-            styleNode.position = SCNVector3(style.values)
+            styleNode.position = SCNVector3(style.values) * CGFloat(2.0)
             boxesNode.addChildNode(styleNode)
-            print (styleNode)
+            //print (styleNode)
         }
-        print (boxesNode)
+        //print (boxesNode)
         //}
     }
     

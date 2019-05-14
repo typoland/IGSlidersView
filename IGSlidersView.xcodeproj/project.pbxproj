@@ -10,6 +10,7 @@
 		B2185486228942D300C4FCF8 /* PreviewScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = B2185485228942D300C4FCF8 /* PreviewScene.scn */; };
 		B21854882289430600C4FCF8 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21854872289430600C4FCF8 /* PreviewController.swift */; };
 		B218548A2289435400C4FCF8 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21854892289435400C4FCF8 /* Preview.swift */; };
+		B218548C228ACF9A00C4FCF8 /* SCNScene + Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = B218548B228ACF9A00C4FCF8 /* SCNScene + Line.swift */; };
 		B2476D582276E75300776352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2476D572276E75300776352 /* AppDelegate.swift */; };
 		B2476D5A2276E75400776352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2476D592276E75400776352 /* Assets.xcassets */; };
 		B2476D5D2276E75400776352 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2476D5B2276E75400776352 /* MainMenu.xib */; };
@@ -46,6 +47,7 @@
 		B2185485228942D300C4FCF8 /* PreviewScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PreviewScene.scn; sourceTree = "<group>"; };
 		B21854872289430600C4FCF8 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		B21854892289435400C4FCF8 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		B218548B228ACF9A00C4FCF8 /* SCNScene + Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNScene + Line.swift"; sourceTree = "<group>"; };
 		B2476D542276E75300776352 /* IGSlidersView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGSlidersView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2476D572276E75300776352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2476D592276E75400776352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				B2185485228942D300C4FCF8 /* PreviewScene.scn */,
 				B21854872289430600C4FCF8 /* PreviewController.swift */,
 				B21854892289435400C4FCF8 /* Preview.swift */,
+				B218548B228ACF9A00C4FCF8 /* SCNScene + Line.swift */,
 			);
 			path = IGSlidersView;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21854882289430600C4FCF8 /* PreviewController.swift in Sources */,
+				B218548C228ACF9A00C4FCF8 /* SCNScene + Line.swift in Sources */,
 				B218548A2289435400C4FCF8 /* Preview.swift in Sources */,
 				B2476D582276E75300776352 /* AppDelegate.swift in Sources */,
 			);
