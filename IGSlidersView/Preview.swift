@@ -39,8 +39,11 @@ class Preview : SCNView {
         
         for style in styles {
             let styleBox = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+            let name = SCNText(string: style.name, extrusionDepth: 0 )
+            let nameNode = SCNNode(geometry: name)
             styleBox.name = style.name
             let styleNode = SCNNode(geometry: styleBox)
+            styleNode.addChildNode(nameNode)
             styleNode.position = SCNVector3(style.values) * CGFloat(2.0)
             boxesNode.addChildNode(styleNode)
             //print (styleNode)
