@@ -17,6 +17,7 @@
             <connections>
                 <outlet property="editView" destination="i0g-4q-Ema" id="BFh-Au-Tv2"/>
                 <outlet property="editViewController" destination="gqj-Vi-Xve" id="5VV-VC-Qo2"/>
+                <outlet property="previewController" destination="xID-mq-nJ1" id="KWZ-Sw-Y9T"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -694,7 +695,7 @@
                     <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EN4-ej-t57">
                         <rect key="frame" x="6" y="7" width="664" height="307"/>
                         <subviews>
-                            <sceneView fixedFrame="YES" id="Ueg-ov-X0A">
+                            <sceneView fixedFrame="YES" id="Ueg-ov-X0A" customClass="Preview" customModule="IGSlidersView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="451" height="307"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </sceneView>
@@ -719,5 +720,10 @@
             <point key="canvasLocation" x="423" y="51.5"/>
         </window>
         <viewController id="gqj-Vi-Xve" customClass="IGSlidersController" customModule="IGSliders"/>
+        <viewController id="xID-mq-nJ1" customClass="PreviewController" customModule="IGSlidersView" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Ueg-ov-X0A" id="b6A-dg-faM"/>
+            </connections>
+        </viewController>
     </objects>
 </document>
