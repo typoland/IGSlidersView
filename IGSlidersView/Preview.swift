@@ -38,9 +38,12 @@ class Preview : SCNView {
         boxesNode.childNodes.forEach{ $0.removeFromParentNode() }
         
         for style in styles {
-            let styleBox = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+            let styleBox = SCNBox(width: 0.01, height: 0.01, length: 0.01, chamferRadius: 0)
+            styleBox.firstMaterial?.diffuse.contents = NSColor.gray
             let name = SCNText(string: style.name, extrusionDepth: 0 )
             let nameNode = SCNNode(geometry: name)
+            nameNode.scale = SCNVector3(0.001, 0.001, 0.001)
+            nameNode.rotation = SCNVector4(0.0, 0.0, 34.0, 0.5)
             styleBox.name = style.name
             let styleNode = SCNNode(geometry: styleBox)
             styleNode.addChildNode(nameNode)
