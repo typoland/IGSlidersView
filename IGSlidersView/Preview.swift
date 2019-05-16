@@ -34,12 +34,16 @@ class Preview : SCNView {
     }
     
     func updateBoxes(with styles:[(name:String, values:[Double])]) {
-        //print ("updateBoxes", boxesNode.parent)
+
         boxesNode.childNodes.forEach{ $0.removeFromParentNode() }
         
         for style in styles {
-            let styleBox = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-            styleBox.firstMaterial?.diffuse.contents = NSColor.gray
+            let styleBox = SCNSphere(radius: 0.05)
+            let vector = SCNVector3(style.values)
+            let color = NSColor(calibratedRed: vector.x, green: vector.y, blue: vector.z, alpha: 1.0)
+                //SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+            styleBox.firstMaterial?.diffuse.contents = color
+            
             //let name = SCNText(string: style.name, extrusionDepth: 0 )
             //let nameNode = SCNNode(geometry: name)
             //nameNode.scale = SCNVector3(0.01, 0.01, 0.01)
@@ -47,7 +51,7 @@ class Preview : SCNView {
             styleBox.name = style.name
             let styleNode = SCNNode(geometry: styleBox)
             //styleNode.addChildNode(nameNode)
-            styleNode.position = SCNVector3(style.values) * CGFloat(2.0)
+            styleNode.position = vector * CGFloat(2.0)
             boxesNode.addChildNode(styleNode)
             //print (styleNode)
         }
