@@ -25,8 +25,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             selector: #selector ( redrawPreview ),
             name: Notification.Name.IGSlidersControllerStylesChanged,
             object: nil)
-        editViewController.insertViewInto(editView)
         editViewController.readFromDefaults(self)
+        editViewController.insertViewInto(editView)
+        previewController.redrawPreview(with: editViewController.coordinates())
+        
 
         //let coords = editViewController.coordinates()
         
