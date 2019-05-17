@@ -11,6 +11,8 @@
 		B21854882289430600C4FCF8 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21854872289430600C4FCF8 /* PreviewController.swift */; };
 		B218548A2289435400C4FCF8 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21854892289435400C4FCF8 /* Preview.swift */; };
 		B218548C228ACF9A00C4FCF8 /* SCNScene + Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = B218548B228ACF9A00C4FCF8 /* SCNScene + Line.swift */; };
+		B2312D5D228E0C6F00355C7E /* EdgesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2312D5C228E0C6F00355C7E /* EdgesFramework.framework */; };
+		B2312D5E228E0C6F00355C7E /* EdgesFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2312D5C228E0C6F00355C7E /* EdgesFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2476D582276E75300776352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2476D572276E75300776352 /* AppDelegate.swift */; };
 		B2476D5A2276E75400776352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2476D592276E75400776352 /* Assets.xcassets */; };
 		B2476D5D2276E75400776352 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2476D5B2276E75400776352 /* MainMenu.xib */; };
@@ -36,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B2312D5E228E0C6F00355C7E /* EdgesFramework.framework in Embed Frameworks */,
 				B2476D9F22783BBB00776352 /* IGSliders.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -48,6 +51,7 @@
 		B21854872289430600C4FCF8 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		B21854892289435400C4FCF8 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		B218548B228ACF9A00C4FCF8 /* SCNScene + Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNScene + Line.swift"; sourceTree = "<group>"; };
+		B2312D5C228E0C6F00355C7E /* EdgesFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EdgesFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2476D542276E75300776352 /* IGSlidersView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGSlidersView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2476D572276E75300776352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2476D592276E75400776352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2312D5D228E0C6F00355C7E /* EdgesFramework.framework in Frameworks */,
 				B2476DA62278B1C300776352 /* IGSliders.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +87,7 @@
 		B2476D4B2276E75300776352 = {
 			isa = PBXGroup;
 			children = (
+				B2312D5C228E0C6F00355C7E /* EdgesFramework.framework */,
 				B2476D9D22783BBB00776352 /* IGSliders.framework */,
 				B2476D562276E75300776352 /* IGSlidersView */,
 				B2476D672276E75500776352 /* IGSlidersViewTests */,
