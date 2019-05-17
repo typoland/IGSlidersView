@@ -27,14 +27,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             object: nil)
         editViewController.readFromDefaults(self)
         editViewController.insertViewInto(editView)
-        previewController.redrawPreview(with: editViewController.coordinates())
+        previewController.redrawPreview(with: editViewController.instances)
         previewController.redrawSliders(with: editViewController.slidersCoordinates)
-
-        //let coords = editViewController.coordinates()
-        
-
-//        editView.addSubview(editViewController.view)
-//        editViewController.view.frame = NSMakeRect(0, 0, editView.frame.width, editView.frame.height)
     }
 
     @objc func redrawPreview (_ notification:Notification) {
@@ -43,6 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         previewController.redrawSliders(with: slidersData)
         previewController.redrawPreview(with: coordinates)
     }
+
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
