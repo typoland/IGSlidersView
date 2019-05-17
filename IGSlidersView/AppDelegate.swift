@@ -38,7 +38,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func redrawPreview (_ notification:Notification) {
-        previewController.redrawPreview(with: (notification.object as? [(name:String, values:[Double])]) ?? [])
+        guard let (coordinates, slidersData) = notification.object as? (coordinates:[(name:String, values:[Double])],
+            sliders:[[[(styleName:String, value:Double)]]]) else {return}
+        previewController.redrawSliders(with: slidersData)
+        previewController.redrawPreview(with: coordinates)
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
