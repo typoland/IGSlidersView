@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         editViewController.readFromDefaults(self)
         editViewController.insertViewInto(editView)
         previewController.redrawPreview(with: editViewController.coordinates())
-        
+        previewController.redrawSliders(with: editViewController.slidersCoordinates)
 
         //let coords = editViewController.coordinates()
         

@@ -39,12 +39,12 @@ class Preview : SCNView {
         slidersNode.childNodes.forEach({$0.removeFromParentNode()})
         for axisNr in 0..<slidersData.count {
             for edgeNr in 0..<slidersData[axisNr].count {
-                print (slidersData[axisNr][edgeNr])
                 for sliderNr in 0 ..< slidersData[axisNr][edgeNr].count {
                     let (name, value) = slidersData[axisNr][edgeNr][sliderNr]
                     let slider = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
+                    slider.firstMaterial?.diffuse.contents = NSColor.gray
                     let sliderNode = SCNNode(geometry: slider)
-                    var coord = [edgeNr & 1 == 1 ? 1.0 : -1.0, edgeNr & 2 == 2 ? 1.0 : -1.0]
+                    var coord = [edgeNr & 2 == 2 ? 1.0 : -1.0, edgeNr & 1 == 1 ? 1.0 : -1.0]
                     if axisNr == 2 {
                         coord.append(value * 2 - 1)
                     } else {
@@ -54,23 +54,24 @@ class Preview : SCNView {
                     slidersNode.addChildNode(sliderNode)
                 }
             }
-            print ()
         }
     }
     
     func drawSelectedAxisLines () {
         axesNode.childNodes.forEach({$0.removeFromParentNode()})
         
-        var geometry:SCNGeometry? = nil
+        var line:SCNGeometry? = nil
+        
         for axisNr in 0...2 {
         switch axisNr {
-        case 0: geometry = SCNBox(width: 2, height: 0.005, length: 0.005, chamferRadius: 0)
-        case 1: geometry = SCNBox(width: 0.005, height: 2, length: 0.005, chamferRadius: 0)
-        case 2: geometry = SCNBox(width: 0.005, height: 0.005, length: 2, chamferRadius: 0)
+        case 0: line = SCNBox(width: 2, height: 0.005, length: 0.005, chamferRadius: 0)
+        case 1: line = SCNBox(width: 0.005, height: 2, length: 0.005, chamferRadius: 0)
+        case 2: line = SCNBox(width: 0.005, height: 0.005, length: 2, chamferRadius: 0)
         default: break
         }
+            line?.firstMaterial?.diffuse.contents = NSColor.gray
         for i in 0...3 {
-            let lineNode = SCNNode(geometry: geometry)
+            let lineNode = SCNNode(geometry: line)
             
             print ( i & 1 , i & 2  )
             var coord = [i & 1 == 1 ? 2.0 : 0, i & 2 == 2 ? 2.0 : 0]
